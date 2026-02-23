@@ -1,8 +1,8 @@
 terraform {
   backend "azurerm" {
-    resource_group_name  = "tfstate-rg"
-    storage_account_name = "tfstatebaivabremote"
-    container_name       = "tfstate"
+    resource_group_name  = "terraform-state-rg"
+    storage_account_name = "tftestbackend2026kr"
+    container_name       = "tfstatekr"
     key                  = "test.gitops.tfstate"
     use_azuread_auth     = false
     use_msi              = true
