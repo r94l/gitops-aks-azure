@@ -6,7 +6,7 @@ A production-ready Infrastructure-as-Code project that provisions an **Azure Kub
 
 ## 🧠 What This Project Does
 
-This project automates the end-to-end provisioning of a cloud-native deployment platform on Azure. Instead of manually configuring Kubernetes clusters or deploying applications by hand, everything — from infrastructure to application delivery — is defined as code and driven by Git.
+This project automates the end-to-end provisioning of a cloud-native deployment platform on Azure. Instead of manually configuring Kubernetes clusters or deploying applications by hand, everything from infrastructure to application delivery is defined as code and driven by Git.
 
 Key capabilities:
 - **Terraform provisions the AKS cluster** including auto-scaling node pools, Azure AD RBAC integration, Azure CNI networking, and Azure Key Vault for secrets management
