@@ -2,6 +2,13 @@
 
 A production-ready Infrastructure-as-Code project that provisions an **Azure Kubernetes Service (AKS)** cluster and sets up a full **GitOps workflow** using **ArgoCD**, all managed through **Terraform**. The project deploys a three-tier web application (React frontend, Node.js backend, PostgreSQL database) across three isolated environments: dev, test, and prod.
 
+
+---
+
+## 🛠️ Tech Stack
+
+`Terraform` · `Azure Kubernetes Service (AKS)` · `ArgoCD` · `Azure Key Vault` · `Azure CNI` · `Helm` · `React` · `Node.js` · `PostgreSQL` · `NGINX Ingress` · `Kubernetes CSI Secrets Store`
+
 ---
 
 ## 🧠 What This Project Does
@@ -383,9 +390,3 @@ terraform destroy -auto-approve
 # Remove kubectl context
 kubectl config delete-context <cluster-context>
 ```
-
----
-
-## 🛠️ Tech Stack
-
-`Terraform` · `Azure Kubernetes Service (AKS)` · `ArgoCD` · `Azure Key Vault` · `Azure CNI` · `Helm` · `React` · `Node.js` · `PostgreSQL` · `NGINX Ingress` · `Kubernetes CSI Secrets Store`
