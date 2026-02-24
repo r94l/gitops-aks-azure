@@ -1,12 +1,12 @@
 # AKS GitOps Platform - Terraform + ArgoCD on Azure
 
-A production-ready Infrastructure-as-Code project that provisions an **Azure Kubernetes Service (AKS)** cluster and sets up a full **GitOps workflow** using **ArgoCD**, all managed through **Terraform**. The project deploys a three-tier web application (React frontend, Node.js backend, PostgreSQL database) across three isolated environments — dev, test, and prod.
+A production-ready Infrastructure-as-Code project that provisions an **Azure Kubernetes Service (AKS)** cluster and sets up a full **GitOps workflow** using **ArgoCD**, all managed through **Terraform**. The project deploys a three-tier web application (React frontend, Node.js backend, PostgreSQL database) across three isolated environments: dev, test and prod.
 
 ---
 
 ## 🧠 What This Project Does
 
-This project automates the end-to-end provisioning of a cloud-native deployment platform on Azure. Instead of manually configuring Kubernetes clusters or deploying applications by hand, everything — from infrastructure to application delivery — is defined as code and driven by Git.
+This project automates the end-to-end provisioning of a cloud-native deployment platform on Azure. Instead of manually configuring Kubernetes clusters or deploying applications by hand, everything from infrastructure to application delivery is defined as code and driven by Git.
 
 Key capabilities:
 - **Terraform provisions the AKS cluster** including auto-scaling node pools, Azure AD RBAC integration, Azure CNI networking, and Azure Key Vault for secrets management
