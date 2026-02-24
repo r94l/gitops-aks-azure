@@ -27,7 +27,7 @@ helm upgrade --install external-secrets external-secrets/external-secrets \
   --namespace external-secrets-system \
   --create-namespace \
   --set installCRDs=true \
-  --wait --timeout=300s
+  --wait --timeout=15m
 
 echo "⏳ Waiting for External Secrets Operator to be ready..."
 kubectl wait --for=condition=ready pod -l app.kubernetes.io/name=external-secrets -n external-secrets-system --timeout=300s

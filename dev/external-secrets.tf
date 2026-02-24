@@ -21,19 +21,21 @@ resource "null_resource" "external_secrets_operator" {
   }
 
   provisioner "local-exec" {
-    command = <<-EOT
-      ${path.module}/scripts/install-external-secrets.sh \
-        "${azurerm_resource_group.main.name}" \
-        "${azurerm_kubernetes_cluster.main.name}" \
-        "${azurerm_key_vault.main[0].vault_uri}" \
-        "${azurerm_kubernetes_cluster.main.kubelet_identity[0].client_id}" \
-        "${var.environment}" \
-        "${azurerm_key_vault_secret.postgres_username[0].name}" \
-        "${azurerm_key_vault_secret.postgres_password[0].name}" \
-        "${azurerm_key_vault_secret.postgres_database[0].name}" \
-        "${azurerm_key_vault_secret.postgres_connection_string[0].name}"
-    EOT
-  }
+  interpreter = ["C:/Program Files/Git/usr/bin/bash.exe", "-c"]
+
+  command = <<-EOT
+    ${path.module}/scripts/install-external-secrets.sh \
+      "${azurerm_resource_group.main.name}" \
+      "${azurerm_kubernetes_cluster.main.name}" \
+      "${azurerm_key_vault.main[0].vault_uri}" \
+      "${azurerm_kubernetes_cluster.main.kubelet_identity[0].client_id}" \
+      "${var.environment}" \
+      "${azurerm_key_vault_secret.postgres_username[0].name}" \
+      "${azurerm_key_vault_secret.postgres_password[0].name}" \
+      "${azurerm_key_vault_secret.postgres_database[0].name}" \
+      "${azurerm_key_vault_secret.postgres_connection_string[0].name}"
+  EOT
+}
 
   # Note: No destroy provisioner needed since destroying the AKS cluster
   # automatically removes all Kubernetes resources including External Secrets Operator

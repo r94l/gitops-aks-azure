@@ -76,17 +76,19 @@ resource "null_resource" "goal_tracker_app" {
   }
 
   provisioner "local-exec" {
-    working_dir = path.module
-    command     = "./scripts/deploy-argocd-app.sh"
+  interpreter = ["C:/Program Files/Git/usr/bin/bash.exe", "-c"]
 
-    environment = {
-      ENVIRONMENT      = var.environment
-      ARGOCD_NAMESPACE = var.argocd_namespace
-      GITOPS_REPO_URL  = var.gitops_repo_url
-      APP_REPO_URL     = var.app_repo_url
-      APP_REPO_PATH    = var.app_repo_path
-    }
+  working_dir = path.module
+  command     = "./scripts/deploy-argocd-app.sh"
+
+  environment = {
+    ENVIRONMENT      = var.environment
+    ARGOCD_NAMESPACE = var.argocd_namespace
+    GITOPS_REPO_URL  = var.gitops_repo_url
+    APP_REPO_URL     = var.app_repo_url
+    APP_REPO_PATH    = var.app_repo_path
   }
+}
 
   # Cleanup when destroying
   provisioner "local-exec" {
