@@ -36,7 +36,7 @@ variable "kubernetes_version" {
 variable "gitops_repo_url" {
   description = "GitOps repository URL for ArgoCD"
   type        = string
-  default     = "https://github.com/itsbaivab/gitops-configs.git"
+  default     = "https://github.com/r94l/gitops-aks-azure-configs.git"
 }
 
 variable "argocd_namespace" {
@@ -48,7 +48,7 @@ variable "argocd_namespace" {
 variable "app_repo_url" {
   description = "Repository URL for the application to be deployed via ArgoCD"
   type        = string
-  default     = "https://github.com/itsBaivab/gitops-configs.git"
+  default     = "https://github.com/r94l/gitops-aks-azure-configs.git"
 }
 
 variable "app_repo_path" {
