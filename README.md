@@ -92,9 +92,9 @@ Each environment is independently configurable with its own `.tfvars`, backend s
 
 | Environment | Region | VM Size | Default Nodes | Auto-Scale Range | Disk |
 |---|---|---|---|---|---|
-| **Dev** | East US | Standard_D2s_v3 | 2 | 1–5 | 30 GB |
-| **Test** | East US 2 | Standard_D4s_v3 | 3 | 2–8 | 50 GB |
-| **Prod** | West US 2 | Standard_D8s_v3 | 5 | 3–10 | 100 GB |
+| **Dev** | France Central | Standard_D2s_v3 | 2 | 1–5 | 30 GB |
+| **Test** | France Central | Standard_D4s_v3 | 3 | 2–8 | 50 GB |
+| **Prod** | France Central | Standard_D8s_v3 | 5 | 3–10 | 100 GB |
 
 ---
 
