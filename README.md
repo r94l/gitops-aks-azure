@@ -23,23 +23,39 @@ Key capabilities:
 
 ```
 .
-├── dev/                    # Development environment
-│   ├── main.tf
-│   ├── provider.tf
-│   ├── variables.tf
-│   ├── terraform.tfvars
-│   ├── outputs.tf
-│   ├── backend.tf
-│   ├── backend.tf.example
-│   ├── kubernetes-resources.tf
+├── dev                     dev env
 │   ├── argocd-app-manifest.yaml
+│   ├── backend.tf
 │   ├── deploy-argocd-app.sh
-│   └── validate-deployment.sh
-├── test/                   # Test/staging environment
-│   └── (same structure as dev/)
-├── prod/                   # Production environment
-│   └── (same structure as dev/)
-└── README.md
+│   ├── kubernetes-resources.tf
+│   ├── main.tf
+│   ├── outputs.tf
+│   ├── provider.tf
+│   ├── terraform.tfvars
+│   ├── validate-deployment.sh
+│   └── variables.tf
+├── prod           #prod env
+│   ├── argocd-app-manifest.yaml
+│   ├── backend.tf
+│   ├── deploy-argocd-app.sh
+│   ├── kubernetes-resources.tf
+│   ├── main.tf
+│   ├── outputs.tf
+│   ├── provider.tf
+│   ├── terraform.tfvars
+│   └── variables.tf
+├── README.md
+└── test            #testing env
+    ├── argocd-app-manifest.yaml
+    ├── backend.tf
+    ├── deploy-argocd-app.sh
+    ├── kubernetes-resources.tf
+    ├── main.tf
+    ├── outputs.tf
+    ├── provider.tf
+    ├── terraform.tfvars
+    └── variables.tf
+
 ```
 
 ### Core Components
